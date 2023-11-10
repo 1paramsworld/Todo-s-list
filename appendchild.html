@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Today's List</h1>
+    <div id="todo">
+        <label for="userinput" id="hey1">Enter Todo:</label>
+        <input type="text" id="userinput"><br><br>
+        <button onclick="addtodo()">Add todo</button>
+        <ul id="todos"></ul>
+    </div>
+    <script>
+        function addtodo(){
+            let userinput=document.getElementById("userinput").value;
+            if(userinput==""){
+                let hey=document.getElementById("todos").innerHTML="enter a todo";
+            }
+            else{
+                let todos=document.getElementById("todos");
+                let li=document.createElement("li");
+                li.textContent=userinput;
+                todos.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
